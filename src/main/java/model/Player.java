@@ -20,4 +20,25 @@ public class Player {
     public int getCurrentXP() { return currentXP; }
     public int getTotalXP() { return totalXP; }
     public String getTitle() { return title; }
+
+public void addXP(int amount) {
+    currentXP += amount;
+    totalXP += amount;
+    int xpNeeded = level * 100;
+    if (currentXP >= xpNeeded) {
+        currentXP -= xpNeeded;
+        level++;
+        updateTitle();
+    }
+}
+
+private void updateTitle() {
+    switch (level) {
+        case 2: title = "Apprenti"; break;
+        case 3: title = "Développeur"; break;
+        case 4: title = "Vétéran"; break;
+        case 5: title = "Architecte"; break;
+        case 6: title = "Légende"; break;
+    }
+}
 }
