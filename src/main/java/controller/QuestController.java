@@ -41,4 +41,8 @@ public class QuestController {
     public void deleteQuest(Quest quest) {
         quests.remove(quest);
     }
+    public void setQuests(java.util.List<Quest> quests) {
+    this.quests = quests;
+}
+
 }

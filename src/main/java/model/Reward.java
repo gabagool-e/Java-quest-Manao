@@ -1,6 +1,8 @@
 package main.java.model;
 
-public class Reward {
+import java.io.Serializable;
+
+public class Reward implements Serializable {
     private String title;
     private int xpAmount;
 

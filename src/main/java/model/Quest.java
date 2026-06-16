@@ -1,6 +1,8 @@
 package main.java.model;
 
-public abstract class Quest {
+import java.io.Serializable;
+
+public abstract class Quest implements Serializable {
     private String title;
     private String description;
     private int xpReward;
